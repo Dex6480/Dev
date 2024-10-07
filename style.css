@@ -1,0 +1,207 @@
+/* Reset */
+body, h1, h2, h3, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styles */
+body {
+    background-image: url("https://images.stockcake.com/public/d/d/d/ddd1630c-56bc-4fa3-9c76-89c376cd29b4_large/sleek-luxury-car-stockcake.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: contain;
+    background-color: #333;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    background: url('header-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #ffd700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    font-size: 1rem;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+.header-content {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    animation: slide-in 1s ease-out;
+}
+
+.header-content p {
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(45deg, #ffd700, #ff6347);
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff6347, #ffd700);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    width: 30px;
+    height: 50px;
+    border: 2px solid #ffd700;
+    border-radius: 30px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 30px;
+    animation: scroll 2s infinite;
+}
+
+.scroll-indicator::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #ffd700;
+    border-radius: 50%;
+    display: block;
+    margin: 5px auto;
+    animation: bounce 2s infinite;
+}
+
+/* Parallax Section */
+.parallax-section {
+    background: url('parallax-bg.jpg') no-repeat fixed center/cover;
+    padding: 150px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.parallax-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Gallery */
+.cars-gallery {
+    padding: 60px 40px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.car-card {
+    background: #fff;
+    width: 300px;
+    margin: 20px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.details-button {
+    padding: 10px 20px;
+    background: #ffd700;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.details-button:hover {
+    background: #333;
+    color: #ffd700;
+}
+
+/* Car Overlay */
+.car-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.car-card:hover .car-overlay {
+    opacity: 1;
+}
